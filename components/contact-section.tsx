@@ -60,7 +60,7 @@ export function ContactSection() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Tu nombre"
+                  placeholder="José López"
                   className="bg-background"
                 />
               </div>
@@ -75,7 +75,7 @@ export function ContactSection() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="tu@email.com"
+                  placeholder="joselopez@hotmail.com"
                   className="bg-background"
                 />
               </div>
@@ -90,7 +90,7 @@ export function ContactSection() {
                   required
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  placeholder="+34 600 000 000"
+                  placeholder="+54 9 223 542 3025"
                   className="bg-background"
                 />
               </div>
@@ -104,7 +104,7 @@ export function ContactSection() {
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Cuéntame sobre tu proyecto..."
+                  placeholder="Contame sobre tu proyecto..."
                   rows={5}
                   className="resize-none bg-background"
                 />
@@ -129,7 +129,7 @@ export function ContactSection() {
                   <div>
                     <p className="mb-1 font-medium">Teléfono</p>
                     <a href="tel:+34600000000" className="transition-colors text-muted-foreground hover:text-primary">
-                      +34 600 000 000
+                      +54 9 223 542 3025
                     </a>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export function ContactSection() {
                       href="mailto:contacto@carpinteria.com"
                       className="transition-colors text-muted-foreground hover:text-primary"
                     >
-                      contacto@carpinteria.com
+                      info@encinocarpinteria.com.ar
                     </a>
                   </div>
                 </div>
@@ -156,9 +156,9 @@ export function ContactSection() {
                   <div>
                     <p className="mb-1 font-medium">Taller</p>
                     <p className="text-muted-foreground">
-                      Calle Artesanos 123
+                      Hipólito Yrigoyen 3450
                       <br />
-                      28001 Madrid, España
+                      Mar del Plata, Buenos Aires, Argentina
                     </p>
                   </div>
                 </div>

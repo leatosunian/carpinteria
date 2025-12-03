@@ -16,9 +16,9 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/artisan-carpenter-workshop-with-wooden-furniture-w.jpg"
+          src="/hero-image.jpg"
           alt="Taller de carpintería"
-          className="object-cover w-full h-full opacity-60"
+          className="object-cover w-full h-full "
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background" />
       </div>

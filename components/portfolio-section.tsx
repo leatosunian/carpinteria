@@ -18,7 +18,8 @@ const projects = [
     image: "/rustic-wooden-dining-table-oak.jpg",
     images: [
       "/rustic-wooden-dining-table-oak.jpg",
-      "/rustic-wooden-dining-table-oak-side.jpg",
+      "/m3.jpg",
+      "/m2.webp"
     ],
   },
   {
@@ -26,35 +27,35 @@ const projects = [
     title: "Estantería Modular",
     description: "Sistema de estanterías personalizadas en nogal con diseño minimalista",
     image: "/modern-wooden-modular-shelving-walnut.jpg",
-    images: ["/modern-wooden-modular-shelving-walnut.jpg", "/modern-wooden-modular-shelving-walnut-2.jpg"],
+    images: ["/modern-wooden-modular-shelving-walnut.jpg", "/em1.webp", "/em2.jpg", "/em3.webp"],
   },
   {
     id: 3,
     title: "Escritorio Ejecutivo",
     description: "Escritorio de cerezo con cajones integrados y acabado premium",
     image: "/executive-wooden-desk-cherry-wood.jpg",
-    images: ["/executive-wooden-desk-cherry-wood.jpg", "/executive-wooden-desk-cherry-wood-2.jpg"],
+    images: ["/executive-wooden-desk-cherry-wood.jpg", "/esc3.jpg", "/esc2.png"],
   },
   {
     id: 4,
     title: "Sillas Artesanales",
     description: "Juego de 6 sillas de comedor con respaldo ergonómico",
     image: "/handcrafted-wooden-dining-chairs.jpg",
-    images: ["/handcrafted-wooden-dining-chairs.jpg", "/handcrafted-wooden-dining-chairs-2.jpg"],
+    images: ["/handcrafted-wooden-dining-chairs.jpg", "/silla2.jpg", "/silla3.jpg"],
   },
   {
     id: 5,
     title: "Puerta de Entrada",
     description: "Puerta maciza de cedro con tallados decorativos personalizados",
     image: "/carved-wooden-entrance-door-cedar.jpg",
-    images: ["/carved-wooden-entrance-door-cedar.jpg", "/carved-wooden-entrance-door-cedar-2.jpg"],
+    images: ["/carved-wooden-entrance-door-cedar.jpg", "/puerta2.jpg", "/puerta3.png"],
   },
   {
     id: 6,
     title: "Cama King Size",
     description: "Estructura de cama en pino con cabecero diseñado a medida",
     image: "/king-size-wooden-bed-frame-pine.jpg",
-    images: ["/king-size-wooden-bed-frame-pine.jpg", "/king-size-wooden-bed-frame-pine-2.jpg"],
+    images: ["/king-size-wooden-bed-frame-pine.jpg", "/cama2.jpg", "/cama1.webp"],
   },
 ]
 
@@ -103,7 +104,7 @@ export function PortfolioSection() {
                     }`}
                 >
                   <div className="absolute inset-0 flex items-center justify-center p-6">
-                    <p className="text-center text-primary-foreground">{project.description}</p>
+                    <p className="text-center text-primary-foreground">Hacé click para ver más</p>
                   </div>
                 </div>
               </div>

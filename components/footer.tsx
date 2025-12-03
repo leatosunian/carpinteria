@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Image src={logo} width={230} height={50} alt="" />
+              <Image src={logo} width={220} height={50} alt="" />
               {/* <span className="text-xl font-semibold">MAESTRO DE LA MADERA</span> */}
             </div>
             <p className="text-background/70 text-sm sm:text-xs 2xl:text-sm leading-relaxed">

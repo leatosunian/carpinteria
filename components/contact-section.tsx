@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react"
+import { Card } from "./ui/card"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -25,21 +26,32 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contacto" className="py-24 bg-card">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl mb-4">Contacto</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+    <section
+      id="contacto"
+      className="py-24 overflow-hidden bg-card bg-opacity-90 rounded-t-3xl"
+      style={{
+        // Vertical gradient: very light gray (almost white) -> white
+        background: 'linear-gradient(to bottom, rgb(231 231 231) 60%, #ffffff 100%)',
+        // Strong rounded corners for the top of the section
+        borderTopLeftRadius: '50px',
+        borderTopRightRadius: '50px',
+      }}
+    >
+
+      <div className="container px-4 mx-auto" >
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 font-semibold text-4xl md:text-5xl">Contacto</h2>
+          <p className="max-w-2xl mx-auto text-lg ">
             ¿Tienes un proyecto en mente? Hablemos sobre cómo puedo ayudarte
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid max-w-6xl gap-12 mx-auto md:grid-cols-2">
           {/* Contact Form */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label htmlFor="name" className="block mb-2 text-sm font-medium">
                   Nombre completo
                 </label>
                 <Input
@@ -54,7 +66,7 @@ export function ContactSection() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label htmlFor="email" className="block mb-2 text-sm font-medium">
                   Email
                 </label>
                 <Input
@@ -69,7 +81,7 @@ export function ContactSection() {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                <label htmlFor="phone" className="block mb-2 text-sm font-medium">
                   Teléfono
                 </label>
                 <Input
@@ -84,7 +96,7 @@ export function ContactSection() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label htmlFor="message" className="block mb-2 text-sm font-medium">
                   Mensaje
                 </label>
                 <Textarea
@@ -94,7 +106,7 @@ export function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Cuéntame sobre tu proyecto..."
                   rows={5}
-                  className="bg-background resize-none"
+                  className="resize-none bg-background"
                 />
               </div>
 
@@ -107,30 +119,30 @@ export function ContactSection() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="font-serif text-2xl mb-6">Información de Contacto</h3>
+              <h3 className="mb-6 font-semibold text-xl 2xl:text-2xl">Información de Contacto</h3>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-full bg-primary/10">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium mb-1">Teléfono</p>
-                    <a href="tel:+34600000000" className="text-muted-foreground hover:text-primary transition-colors">
+                    <p className="mb-1 font-medium">Teléfono</p>
+                    <a href="tel:+34600000000" className="transition-colors text-muted-foreground hover:text-primary">
                       +34 600 000 000
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-full bg-primary/10">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium mb-1">Email</p>
+                    <p className="mb-1 font-medium">Email</p>
                     <a
                       href="mailto:contacto@carpinteria.com"
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="transition-colors text-muted-foreground hover:text-primary"
                     >
                       contacto@carpinteria.com
                     </a>
@@ -138,11 +150,11 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-full bg-primary/10">
                     <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium mb-1">Taller</p>
+                    <p className="mb-1 font-medium">Taller</p>
                     <p className="text-muted-foreground">
                       Calle Artesanos 123
                       <br />
@@ -154,13 +166,13 @@ export function ContactSection() {
             </div>
 
             <div>
-              <h3 className="font-serif text-2xl mb-6">Síguenos</h3>
+              <h3 className="mb-6 font-semibold text-xl 2xl:text-2xl">Síguenos</h3>
               <div className="flex gap-4">
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5" />
@@ -169,7 +181,7 @@ export function ContactSection() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-5 h-5" />
@@ -177,9 +189,9 @@ export function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-muted p-6 rounded-lg">
-              <h4 className="font-semibold mb-2">Horario de Atención</h4>
-              <div className="text-sm text-muted-foreground space-y-1">
+            <div className="p-6 rounded-lg bg-muted">
+              <h4 className="mb-2 font-semibold">Horario de Atención</h4>
+              <div className="space-y-1 text-sm text-muted-foreground">
                 <p>Lunes - Viernes: 9:00 - 18:00</p>
                 <p>Sábados: 10:00 - 14:00</p>
                 <p>Domingos: Cerrado</p>

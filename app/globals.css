@@ -40,8 +40,22 @@
 }
 
 @theme inline {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-serif: "Playfair Display", serif;
+  /* Use the Poppins variable set by next/font (layout.tsx adds the variable to <html>) */
+  --font-sans: var(
+    --font-poppins,
+    "Poppins",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    "Liberation Sans",
+    sans-serif
+  );
+  /* Keep a neutral serif fallback for headings */
+  --font-serif: Georgia, "Times New Roman", Times, serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -101,5 +115,37 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif);
+  /* font-family: var(--font-serif); */
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+}
+
+.hover-underline {
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgb(74, 0, 143);
+  bottom: -3px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+  top: -3px;
+  transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
 }

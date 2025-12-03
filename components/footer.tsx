@@ -1,3 +1,7 @@
+import logo from "@/public/logo_encino_white.png"
+import Image from "next/image"
+import Link from "next/link"
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -7,10 +11,10 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-background rounded" />
-              <span className="font-serif text-xl font-semibold">MAESTRO DE LA MADERA</span>
+              <Image src={logo} width={230} height={50} alt="" />
+              {/* <span className="text-xl font-semibold">MAESTRO DE LA MADERA</span> */}
             </div>
-            <p className="text-background/70 text-sm leading-relaxed">
+            <p className="text-background/70 text-sm sm:text-xs 2xl:text-sm leading-relaxed">
               Creando muebles únicos y duraderos con pasión y dedicación desde hace más de 15 años.
             </p>
           </div>
@@ -68,8 +72,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-background/20 pt-8 text-center text-sm text-background/70">
-          <p>© {currentYear} Maestro de la Madera. Todos los derechos reservados.</p>
+        <div className="border-t border-background/20 pt-8  text-center text-sm text-background/70">
+          <p>
+            © {currentYear} Encino Carpintería. Desarrollado por{" "}
+            <Link target="_blank" href="https://tosunian.dev" className="hover:text-background ">
+              <div className="hover-underline">tosunian.dev</div>
+            </Link>
+          </p>
+
         </div>
       </div>
     </footer>

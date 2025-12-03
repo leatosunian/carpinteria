@@ -4,7 +4,7 @@ export function AboutSection() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="order-2 md:order-1">
-            <h2 className="font-serif text-4xl md:text-5xl mb-6">Sobre Mí</h2>
+            <h2 className="text-4xl md:text-5xl mb-6 font-semibold">Sobre Mí</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 Con más de 15 años de experiencia en el arte de la carpintería, he dedicado mi vida a transformar la
@@ -26,7 +26,7 @@ export function AboutSection() {
 
           <div className="order-1 md:order-2">
             <img
-              src="/skilled-carpenter-working-in-workshop-with-tools.jpg"
+              src="/Gemini_Generated_Image_mbawgmbawgmbawgm.png"
               alt="Carpintero trabajando"
               className="w-full h-[500px] object-cover rounded-lg shadow-lg"
             />

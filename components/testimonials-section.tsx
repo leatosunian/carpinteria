@@ -29,7 +29,7 @@ export function TestimonialsSection() {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl mb-4">Testimonios</h2>
+          <h2 className="text-4xl md:text-5xl mb-4 font-semibold">Testimonios</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Lo que dicen nuestros clientes satisfechos</p>
         </div>
 
@@ -38,7 +38,7 @@ export function TestimonialsSection() {
             <div key={index} className="bg-card p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  <Star key={i} className="w-5 fill-amber-500 h-5 text-white  " />
                 ))}
               </div>
 

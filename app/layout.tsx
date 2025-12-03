@@ -16,7 +16,27 @@ export const metadata: Metadata = {
   description:
     "Creando muebles únicos a medida para tu hogar. Más de 15 años de experiencia en carpintería artesanal y diseño de interiores en madera.",
   keywords: "carpintería, muebles a medida, madera, artesanal, restauración, diseño interiores",
-  authors: [{ name: "Leandro Tosunian", url: "https://tosunian.dev/" }]
+  authors: [{ name: "Leandro Tosunian", url: "https://tosunian.dev/" }],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "Encino - Carpintería Artesanal",
+    description: "Creando muebles únicos a medida para tu hogar. Más de 15 años de experiencia en carpintería artesanal y diseño de interiores en madera.",
+    url: "https://encino-carpinteria.netlify.app/",
+    siteName: "Encino - Carpintería Artesanal",
+    images: [
+      {
+        url: "/favicon.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "es_ES",
+    type: "website",
+  },
 }
 
 export default function RootLayout({

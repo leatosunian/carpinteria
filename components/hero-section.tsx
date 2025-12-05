@@ -25,11 +25,11 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="container relative z-10 px-4 mx-auto text-center">
-        <h1 className="mb-6  text-5xl font-normal leading-tight md:text-7xl 2xl:text-8xl text-balance">
+        <h1 className="mb-6 text-5xl font-normal leading-tight md:text-7xl 2xl:text-8xl text-balance">
           Creando muebles únicos a medida para tu hogar
         </h1>
         <p className="max-w-2xl mx-auto mb-12 text-lg md:text-xl text-muted-foreground text-pretty">
-          Transforma tus espacios con piezas artesanales de madera diseñadas con pasión y precisión
+          Diseñamos y construimos muebles únicos que convierten cualquier espacio en tu lugar soñado
         </p>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
